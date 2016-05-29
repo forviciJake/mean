@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/app.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body ng-app="app" ng-controller="ApplicationCtrl">
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="/#/">Posts</a></li>
+            <li><a href="/#/register">Register</a></li>
+            <li><a href="/#/login">Login</a></li>
+        </ul>
+        <p ng-if="currentUser" class="navbar-text navbar-right">
+            Signed in as  {{currentUser.username}} 
+            <button ng-click="logout()" class="btn btn-default" >Logout</button>
+        </p>
+    </div>
+</nav>
+    
+    
+    <ng-view></ng-view>
+
+    
+    <!-- Angular min, route, resource -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+
+
+    <!-- Angular App -->
+    <script src="/app.js"></script>
+
+</body>
+</html>
